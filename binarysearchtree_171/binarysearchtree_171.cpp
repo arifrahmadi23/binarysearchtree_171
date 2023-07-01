@@ -151,6 +151,7 @@ int main()
 			break;
 		}
 		case '3':
+		{
 			obj.preorder(obj.ROOT);
 			break;
 		}
@@ -163,7 +164,8 @@ int main()
 			return 0;
 		default:
 		{
-
+			cout << "Invalid option" << endl;
+			break;
 		}
 	}
 }
