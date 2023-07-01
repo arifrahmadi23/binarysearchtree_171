@@ -27,4 +27,32 @@ public:
 	{
 		ROOT = NULL; // initializing ROOT to null
 	}
+
+	void insert(string element) // insert a node in the binary search tree
+	{
+		Node* newNode = new Node(element, NULL, NULL); // allocate memory for the new node
+		newNode->info = element; // assign value to the data field of the new node
+		newNode->leftchild = NULL; // make the left child of the new node point to NULL
+		newNode->rightchild = NULL; // make the right child of the new node point to NULL
+
+		Node* parent = NULL;
+		Node* currentNode = NULL;
+		search(element, parent, currentNode); // Locate the node which will be parent of the node to be inserted
+
+		if (parent == NULL) // if the parent is NULL (Tree is empty)
+		{
+			ROOT = newNode; // Mark the new node as ROOT
+			return; // Exit
+		}
+
+		if (element < parent->info) // If the value in the data field of the new node is less than that of the parent
+		{
+			parent->leftchild = newNode; // Make the left child of the parent point to the new node
+		}
+		else if (element > parent->info) // If the value in the data field of the new node is less than that of the parent
+		{
+			parent->rightchild = newNode; // Make the right child of the parent point to the new node
+		}
+	}
+	}
 };
