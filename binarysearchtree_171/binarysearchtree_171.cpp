@@ -120,5 +120,5 @@ public:
 
 int main()
 {
-
+	BinaryTree obj;
 }
