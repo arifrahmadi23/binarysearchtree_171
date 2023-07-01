@@ -71,4 +71,8 @@ public:
 		}
 	}
 	
+	void inorder(Node* ptr)
+	{
+
+	}
 };
