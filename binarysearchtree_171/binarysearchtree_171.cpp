@@ -54,5 +54,5 @@ public:
 			parent->rightchild = newNode; // Make the right child of the parent point to the new node
 		}
 	}
-	}
+	
 };
